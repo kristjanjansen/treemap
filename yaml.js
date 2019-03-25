@@ -9,11 +9,33 @@ children:
   - title: matem
     value: 5
   - title: loodus
-    value: 6
+    children:
+    - title: organismid
+      value: 1
+    - title: keemia
+      value: 1
+    - title: fyysika
+      value: 1
+    - title: tehnoloogia
+      value: 1
+    - title: loodusgeograafia
+      value: 1
+    - title: keskkond
+      value: 1
   - title: sotsiaal
-    value: 7
+    children:
+    - title: riigikaitse
+      value: 0.5
+    - title: ajalugu
+      value: 3
+    - title: majandus/rahvastik
+      value: 3.5
   - title: kunst
-    value: 1.5
+    children:
+    - title: kunst
+      value: 0.75
+    - title: muusika
+      value: 0.75
 - title: Pohiopingud
   children: 
   - title: praktika
@@ -21,6 +43,7 @@ children:
   - title: moodulid
     children: 
     - title: alusteadmised
+      year: [1]
       children:
       - title: rakendustarkv
         value: 2
@@ -35,6 +58,7 @@ children:
       - title: inglise
         value: 2.5
     - title: prog. alused
+      year: [1]
       children:
         - title: dokumenteerimine
           value: 1
@@ -47,6 +71,7 @@ children:
         - title: inglise
           value: 1
     - title: arendusprotsess
+      year: [1]
       children:
         - title: eesti
           value: 0.75
@@ -57,6 +82,7 @@ children:
         - title: inglise
           value: 0.75
     - title: agiilne
+      year: [1]
       children: 
         - title: klienditeenindus
           value: 1.5
@@ -65,6 +91,7 @@ children:
         - title: inglise
           value: 1
     - title: andmebaasid
+      year: [1,2]
       children:
         - title: andmebaasid
           value: 5
@@ -73,6 +100,7 @@ children:
         - title: inglise
           value: 1.5
     - title: veebirakendused
+      year: [2]
       children:
         - title: stat
           value: 1
@@ -87,12 +115,14 @@ children:
         - title: inglise
           value: 1
     - title: testimine
+      year: [2,3]
       children:
       - title: testimine
         value: 6
       - title: inglise
         value: 1.5
     - title: programmeerimine
+      year: [2,3]
       children:
       - title: funktsioonid
         value: 1.5
@@ -105,8 +135,10 @@ children:
       - title: inglise
         value: 2
     - title: hajusrakendused
+      year: [3]
       value: 6
     - title: it juhtimine
+      year: [1,2,3]
       children:
       - title: seminar
         value: 1.5
@@ -123,6 +155,7 @@ children:
       - title: inglise
         value: 0.5
     - title: karjaar
+      year: [1,2,3]
       children:
       - title: karjaariopetus
         value: 1
@@ -135,4 +168,22 @@ children:
       - title: suhtlemine
         value: 1.5
 - title: valikopingud
-  value: 28`
+  children:
+  - title: veebidisain
+    value: 12
+  - title: ettevotlus
+    children: 
+    - title: ettev turundus
+      value: 3
+    - title: finantsid,alustamine
+      value: 3
+  - title: muusikateh
+    value: 4
+  - title: robootika
+    value: 4
+  - title: tarkvarapr
+    value: 4
+  - title: serveridvorgud
+    value: 4
+  
+`

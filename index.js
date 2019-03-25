@@ -15,10 +15,10 @@ new Vue({
       return this.yaml
         ? d3
             .treemap()
-            .tile(d3.treemapSquarify.ratio(2))
+            .tile(d3.treemapSquarify.ratio(3))
             .size([this.width, this.height])
             .padding(3)
-            .paddingTop(25)
+            .paddingTop(20)
             (d3.hierarchy(this.parsedYaml).sum(d => d.value))
             .descendants()
         : [];
@@ -30,6 +30,9 @@ new Vue({
   methods: {
     color(i) {
       return this.nodes.length ? d3.interpolateRdYlBu((i / this.nodes.length / 3) + 0.25) : ''
+    },
+    yearColor(i) {
+      return d3.interpolateViridis(1 - ((i / 3) + 0.25))
     }
   },
   template: `
@@ -54,12 +57,21 @@ new Vue({
         :ry="5 / n.depth + 1"
         stroke="rgba(0,0,0,0.1)"
       />
+      <circle 
+        v-if="n.data.year"
+        v-for="(y,i) in n.data.year"
+        :cx="n.x0 + 7 + (5 * i)"
+        :cy="n.y0 + 9"
+        r="2"
+        :fill="yearColor(y - 1)"
+      />
       <text
-        :x="n.x0 + 5"
+        :x="n.x0 + (n.data.year ? (n.data.year.length * 5) + 7 : 5)"
         :y="n.y0 + 3"
         alignment-baseline="text-before-edge"
         style="font-size: 9px;"
         v-html="n.data.title"
+        opacity="0.8"
       />
       <text
         :x="n.x1 - 5"
