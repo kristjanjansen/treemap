@@ -5,3 +5,5 @@ Generates a SVG treemap from YAML tree structure and calculates group aggregates
 ### Installation
 
 There is no installation, open the project in the local web server
+
+![](screenshot.png)
